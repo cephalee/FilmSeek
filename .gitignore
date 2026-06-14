@@ -1,0 +1,6 @@
+dataset/
+dataset.jsonl
+movie-search/
+index.faiss
+checkpoints/
+.env
