@@ -1,20 +1,28 @@
 from datasets import load_from_disk
 from sentence_transformers import SentenceTransformer
+from huggingface_hub import snapshot_download
 import streamlit as st
 import pandas as pd
+import os
 
 @st.cache_resource
 def load_everything():
-    dataset = load_from_disk("dataset")
+    if not os.path.exists("dataset_info.json"):
+        snapshot_download(
+            repo_id="celaphee/filmseek-dataset",
+            repo_type="dataset",
+            local_dir="."
+        )
+    dataset = load_from_disk(".")
     dataset.load_faiss_index("embeddings", "index.faiss")
-    model = SentenceTransformer('movie-search')
+    model = SentenceTransformer(".")
     return dataset, model
 
 dataset, model = load_everything()
 
 st.title("Movie Finder")
 st.header("Describe the movie you want to watch")
-query = st.text_input("Label", placeholder="A kid finding is a sorcerer")
+query = st.text_input("", placeholder="A kid finding he is a sorcerer")
 
 with st.sidebar:
     st.header("Filters")

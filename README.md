@@ -1,3 +1,13 @@
+---
+title: FilmSeek
+colorFrom: blue
+colorTo: purple
+sdk: streamlit
+sdk_version: "1.45.1"
+app_file: app.py
+pinned: false
+---
+
 # FilmSeek
 
 Describe what you want to watch and get a movie recommendation.
@@ -6,7 +16,8 @@ Describe what you want to watch and get a movie recommendation.
 
 ## Demo
 
-[Hugging Face Spaces — link coming soon]
+## Demo
+[FilmSeek on Hugging Face Spaces](https://huggingface.co/spaces/celaphee/filmseek)
 
 ---
 
