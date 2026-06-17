@@ -15,9 +15,9 @@ Describe what you want to watch and get a movie recommendation.
 ---
 
 ## Demo
-
-## Demo
 [FilmSeek on Hugging Face Spaces](https://huggingface.co/spaces/celaphee/filmseek)
+
+![FilmSeek screenshot](filmseek.png)
 
 ---
 
